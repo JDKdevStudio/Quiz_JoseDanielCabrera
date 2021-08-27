@@ -16,7 +16,7 @@ namespace Quiz_JoseDanielCabrera
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Axie_Infinity_Blockchain());
         }
     }
 }

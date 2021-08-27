@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Quiz_JoseDanielCabrera
 {
-    public partial class Form1 : Form
+    public partial class Axie_Infinity_Blockchain : Form
     {
-        public Form1()
+        public Axie_Infinity_Blockchain()
         {
             InitializeComponent();
         }
