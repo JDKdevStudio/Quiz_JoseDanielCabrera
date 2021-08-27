@@ -19,7 +19,19 @@ namespace Quiz_JoseDanielCabrera
 
         private void Add_Click(object sender, EventArgs e)
         {
-            rtxtResults.Text = rtxtResults.Text + "\n" + "--------------------" + "\n" + Wallet.Text + "\n" + Fecha.Value + "\n" + AxieType.SelectedItem + "\n" + Estado.SelectedItem + "\n" + Pureza.Value + "\n" + "--------------------";
+            if (String.IsNullOrEmpty(Wallet.Text))
+            {
+                MessageBox.Show("Primero debes rellenar los campos");
+            }
+            else
+            {
+                rtxtResults.Text = rtxtResults.Text + "\n" + "--------------------" + "\n" + Wallet.Text + "\n" + Fecha.Value + "\n" + AxieType.SelectedItem + "\n" + Estado.SelectedItem + "\n" + Pureza.Value + "\n" + "--------------------";
+                Wallet.Clear();
+                AxieType.Text = string.Empty;
+                Estado.ClearSelected();
+                Pureza.Value = 1;
+                MessageBox.Show("Registro exitoso");
+            }
         }
 
         private void Report_Click(object sender, EventArgs e)
