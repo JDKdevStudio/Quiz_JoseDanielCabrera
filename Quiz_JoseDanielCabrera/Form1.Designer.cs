@@ -37,10 +37,14 @@ namespace Quiz_JoseDanielCabrera
             this.Fecha = new System.Windows.Forms.DateTimePicker();
             this.AxieType = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.Estado = new System.Windows.Forms.CheckedListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Pureza = new System.Windows.Forms.TrackBar();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.rtxtResults = new System.Windows.Forms.RichTextBox();
+            this.Add = new System.Windows.Forms.Button();
+            this.Report = new System.Windows.Forms.Button();
+            this.Estado = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.TitleApp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pureza)).BeginInit();
             this.SuspendLayout();
@@ -123,17 +127,6 @@ namespace Quiz_JoseDanielCabrera
             this.label3.TabIndex = 6;
             this.label3.Text = "Categoría";
             // 
-            // Estado
-            // 
-            this.Estado.FormattingEnabled = true;
-            this.Estado.Items.AddRange(new object[] {
-            "Huevo",
-            "Adulto"});
-            this.Estado.Location = new System.Drawing.Point(110, 512);
-            this.Estado.Name = "Estado";
-            this.Estado.Size = new System.Drawing.Size(120, 34);
-            this.Estado.TabIndex = 7;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -168,16 +161,72 @@ namespace Quiz_JoseDanielCabrera
             this.label5.TabIndex = 10;
             this.label5.Text = "Pureza";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
+            this.label6.Location = new System.Drawing.Point(422, 220);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(264, 30);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Historial de transacciones";
+            // 
+            // rtxtResults
+            // 
+            this.rtxtResults.Location = new System.Drawing.Point(422, 265);
+            this.rtxtResults.Name = "rtxtResults";
+            this.rtxtResults.Size = new System.Drawing.Size(264, 129);
+            this.rtxtResults.TabIndex = 12;
+            this.rtxtResults.Text = "";
+            // 
+            // Add
+            // 
+            this.Add.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Add.Location = new System.Drawing.Point(415, 400);
+            this.Add.Name = "Add";
+            this.Add.Size = new System.Drawing.Size(136, 36);
+            this.Add.TabIndex = 13;
+            this.Add.Text = "Añadir";
+            this.Add.UseVisualStyleBackColor = false;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
+            // 
+            // Report
+            // 
+            this.Report.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Report.Location = new System.Drawing.Point(557, 400);
+            this.Report.Name = "Report";
+            this.Report.Size = new System.Drawing.Size(136, 36);
+            this.Report.TabIndex = 14;
+            this.Report.Text = "Reporte";
+            this.Report.UseVisualStyleBackColor = false;
+            // 
+            // Estado
+            // 
+            this.Estado.FormattingEnabled = true;
+            this.Estado.Items.AddRange(new object[] {
+            "Huevo",
+            "Adulto"});
+            this.Estado.Location = new System.Drawing.Point(113, 506);
+            this.Estado.Name = "Estado";
+            this.Estado.Size = new System.Drawing.Size(120, 43);
+            this.Estado.TabIndex = 15;
+            // 
             // Axie_Infinity_Blockchain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.Estado);
+            this.Controls.Add(this.Report);
+            this.Controls.Add(this.Add);
+            this.Controls.Add(this.rtxtResults);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Pureza);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.Estado);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.AxieType);
             this.Controls.Add(this.Fecha);
@@ -205,10 +254,14 @@ namespace Quiz_JoseDanielCabrera
         private System.Windows.Forms.DateTimePicker Fecha;
         private System.Windows.Forms.ComboBox AxieType;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckedListBox Estado;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TrackBar Pureza;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.RichTextBox rtxtResults;
+        private System.Windows.Forms.Button Add;
+        private System.Windows.Forms.Button Report;
+        private System.Windows.Forms.ListBox Estado;
     }
 }
 
