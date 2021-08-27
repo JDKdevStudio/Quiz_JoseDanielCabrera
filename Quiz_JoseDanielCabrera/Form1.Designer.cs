@@ -52,7 +52,7 @@ namespace Quiz_JoseDanielCabrera
             // TitleApp
             // 
             this.TitleApp.BackColor = System.Drawing.Color.Transparent;
-            this.TitleApp.Image = ((System.Drawing.Image)(resources.GetObject("TitleApp.Image")));
+            this.TitleApp.Image = global::Quiz_JoseDanielCabrera.Properties.Resources.Titleapp2;
             this.TitleApp.Location = new System.Drawing.Point(-63, -7);
             this.TitleApp.Name = "TitleApp";
             this.TitleApp.Size = new System.Drawing.Size(357, 212);
@@ -201,6 +201,7 @@ namespace Quiz_JoseDanielCabrera
             this.Report.TabIndex = 14;
             this.Report.Text = "Reporte";
             this.Report.UseVisualStyleBackColor = false;
+            this.Report.Click += new System.EventHandler(this.Report_Click);
             // 
             // Estado
             // 
@@ -217,7 +218,7 @@ namespace Quiz_JoseDanielCabrera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::Quiz_JoseDanielCabrera.Properties.Resources.bgapp;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.Estado);
             this.Controls.Add(this.Report);
@@ -237,7 +238,8 @@ namespace Quiz_JoseDanielCabrera
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Axie_Infinity_Blockchain";
-            this.Text = "Axie Infinity Blockchain";
+            this.RightToLeftLayout = true;
+            this.Text = "Axie Infinity Blockchain - Registro";
             ((System.ComponentModel.ISupportInitialize)(this.TitleApp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pureza)).EndInit();
             this.ResumeLayout(false);

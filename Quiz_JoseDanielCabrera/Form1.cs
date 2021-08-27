@@ -19,7 +19,16 @@ namespace Quiz_JoseDanielCabrera
 
         private void Add_Click(object sender, EventArgs e)
         {
-            this.rtxtResults.Text = this.rtxtResults.Text + "\n" + "--------------------" + "\n" + this.Wallet.Text + "\n" + this.Fecha.Value + "\n" + this.AxieType.SelectedItem + "\n" + this.Estado.SelectedItem + "\n" + Pureza.Value + "\n" + "--------------------";
+            rtxtResults.Text = rtxtResults.Text + "\n" + "--------------------" + "\n" + Wallet.Text + "\n" + Fecha.Value + "\n" + AxieType.SelectedItem + "\n" + Estado.SelectedItem + "\n" + Pureza.Value + "\n" + "--------------------";
+        }
+
+        private void Report_Click(object sender, EventArgs e)
+        {
+            using (Form2 sf = new Form2())
+            {
+                sf.ReporteData = rtxtResults.Text;
+                sf.ShowDialog();
+            }
         }
     }
 }
